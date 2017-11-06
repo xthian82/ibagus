@@ -297,7 +297,7 @@ CREATE TABLE `material` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descripcion` varchar(255) NOT NULL,
   `medida_id` int(11) NOT NULL,
-  `precio` varchar(255),
+  `precio` decimal(18) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_medida` (`medida_id`),
   CONSTRAINT `fk_medida` FOREIGN KEY (`medida_id`) REFERENCES `medida` (`id`)

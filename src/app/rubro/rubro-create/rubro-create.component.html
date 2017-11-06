@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <form novalidate [formGroup]="rubroForm" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <div class="form-group">
+              <label>Descripcion</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="descripcion">
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary"  [disabled]="!rubroForm.valid">Guardar</button>
+          <button type="button" class="btn btn-warning" (click)="redirectPage()">Cancelar</button>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
